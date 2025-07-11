@@ -12,7 +12,7 @@ jobs:
       MONGODB_CLUSTER_ADDRESS: clustergit.8ts8ef4.mongodb.net
       MONGODB_USERNAME: kassaath
       MONGODB_PASSWORD: tkyjKIrRWm6NB6ZB
-      PORT: 8080
+      PORT: 27017
     environment: testing
     runs-on: ubuntu-latest
     steps:
