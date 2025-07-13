@@ -10,8 +10,8 @@ jobs:
   test:
     env:
       MONGODB_CLUSTER_ADDRESS: clustergit.8ts8ef4.mongodb.net
-      MONGODB_USERNAME: kassaath
-      MONGODB_PASSWORD: tkyjKIrRWm6NB6ZB
+      MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
+      MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD }}
       PORT: 8080
     runs-on: ubuntu-latest
     steps:
@@ -35,9 +35,9 @@ jobs:
   deploy:
     needs: test
     runs-on: ubuntu-latest
-    env:
-      MONGODB_USERNAME: kassaath
-      MONGODB_DB_NAME: gha-demo
+    # env:
+    #   MONGODB_USERNAME: kassaath
+    #   MONGODB_DB_NAME: gha-demo
     steps:
       - name: Output information
         run: |        
